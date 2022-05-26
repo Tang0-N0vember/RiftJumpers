@@ -10,6 +10,8 @@ public class PlayerMovementController : NetworkBehaviour
 
     [SerializeField] GameObject cameraHolder;
 
+    [SerializeField] GameObject cameraObject;
+
     [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
 
     private float ySpeed;
@@ -39,6 +41,8 @@ public class PlayerMovementController : NetworkBehaviour
             {
                 SetPosition();
                 playerModel.SetActive(true);
+                //cameraObject.SetActive(true);
+
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
